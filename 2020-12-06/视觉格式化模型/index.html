@@ -20,20 +20,24 @@
     var CONFIG = {"hostname":"someu.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","width":280,"display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="Waiting…">
+  <meta name="description" content="无规矩不成方圆">
 <meta property="og:type" content="article">
-<meta property="og:title" content="React Fiber架构理解">
-<meta property="og:url" content="https://someu.github.io/2020-11-16/react-fiber%E6%9E%B6%E6%9E%84%E7%90%86%E8%A7%A3/index.html">
+<meta property="og:title" content="视觉格式化模型">
+<meta property="og:url" content="https://someu.github.io/2020-12-06/%E8%A7%86%E8%A7%89%E6%A0%BC%E5%BC%8F%E5%8C%96%E6%A8%A1%E5%9E%8B/index.html">
 <meta property="og:site_name" content="Someu">
-<meta property="og:description" content="Waiting…">
+<meta property="og:description" content="无规矩不成方圆">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-11-16T13:58:40.000Z">
-<meta property="article:modified_time" content="2020-11-16T14:05:24.301Z">
+<meta property="og:image" content="https://someu.github.io/2020-12-06/%E8%A7%86%E8%A7%89%E6%A0%BC%E5%BC%8F%E5%8C%96%E6%A8%A1%E5%9E%8B/image-20201206205708208.png">
+<meta property="og:image" content="https://someu.github.io/2020-12-06/%E8%A7%86%E8%A7%89%E6%A0%BC%E5%BC%8F%E5%8C%96%E6%A8%A1%E5%9E%8B/image-20201206163829213.png">
+<meta property="og:image" content="https://someu.github.io/2020-12-06/%E8%A7%86%E8%A7%89%E6%A0%BC%E5%BC%8F%E5%8C%96%E6%A8%A1%E5%9E%8B/image-20201206180316697.png">
+<meta property="og:image" content="https://someu.github.io/2020-12-06/%E8%A7%86%E8%A7%89%E6%A0%BC%E5%BC%8F%E5%8C%96%E6%A8%A1%E5%9E%8B/image-20201206201850184.png">
+<meta property="article:published_time" content="2020-12-06T07:59:21.000Z">
+<meta property="article:modified_time" content="2020-12-06T12:57:28.124Z">
 <meta property="article:author" content="Someu">
-<meta property="article:tag" content="React">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://someu.github.io/2020-12-06/%E8%A7%86%E8%A7%89%E6%A0%BC%E5%BC%8F%E5%8C%96%E6%A8%A1%E5%9E%8B/image-20201206205708208.png">
 
-<link rel="canonical" href="https://someu.github.io/2020-11-16/react-fiber%E6%9E%B6%E6%9E%84%E7%90%86%E8%A7%A3/">
+<link rel="canonical" href="https://someu.github.io/2020-12-06/%E8%A7%86%E8%A7%89%E6%A0%BC%E5%BC%8F%E5%8C%96%E6%A8%A1%E5%9E%8B/">
 
 
 <script id="page-configurations">
@@ -46,7 +50,7 @@
   };
 </script>
 
-  <title>React Fiber架构理解 | Someu</title>
+  <title>视觉格式化模型 | Someu</title>
   
 
 
@@ -165,7 +169,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://someu.github.io/2020-11-16/react-fiber%E6%9E%B6%E6%9E%84%E7%90%86%E8%A7%A3/">
+    <link itemprop="mainEntityOfPage" href="https://someu.github.io/2020-12-06/%E8%A7%86%E8%A7%89%E6%A0%BC%E5%BC%8F%E5%8C%96%E6%A8%A1%E5%9E%8B/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpeg">
@@ -178,7 +182,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          React Fiber架构理解
+          视觉格式化模型
         </h1>
 
         <div class="post-meta">
@@ -189,7 +193,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2020-11-16 21:58:40 / 修改时间：22:05:24" itemprop="dateCreated datePublished" datetime="2020-11-16T21:58:40+08:00">2020-11-16</time>
+              <time title="创建时间：2020-12-06 15:59:21 / 修改时间：20:57:28" itemprop="dateCreated datePublished" datetime="2020-12-06T15:59:21+08:00">2020-12-06</time>
             </span>
 
           
@@ -204,8 +208,59 @@
 
       
         <blockquote>
-<p>Waiting…</p>
+<p>无规矩不成方圆</p>
 </blockquote>
+<a id="more"></a>
+
+<p><img src="/2020-12-06/%E8%A7%86%E8%A7%89%E6%A0%BC%E5%BC%8F%E5%8C%96%E6%A8%A1%E5%9E%8B/image-20201206205708208.png" alt="image-20201206205708208"></p>
+<h2 id="元素框"><a href="#元素框" class="headerlink" title="元素框"></a>元素框</h2><p>CSS中每个元素都生成一个或多个元素框，每个元素框中心是内容区域，四周有可选的内边距、边框、外边距。元素框的类型可分为：</p>
+<ul>
+<li>块级框：<code>div</code>、<code>p</code>等块级元素或<code>dispalay</code>属性为<code>block</code>的元素形成的元素框。 参与块级格式化。</li>
+<li>行内框：<code>span</code>、<code>strong</code>等行内元素或<code>dispalya</code>属性为<code>inline</code>的元素形成的元素框。参与行内格式化。</li>
+<li>行内块级框：<code>display</code>属性为<code>inline-block</code>的元素形成的元素框。内部特征表现为块级框，外部特征表现为行内框。</li>
+</ul>
+<h2 id="包含块"><a href="#包含块" class="headerlink" title="包含块"></a>包含块</h2><p>包含块是一个元素的布局上下文，每个元素都相对于该元素的包含块摆放。</p>
+<p>包含块由离元素最近的<strong>生成列表项目或块级框祖辈元素</strong>的边界构成。</p>
+<h2 id="块级框的格式化"><a href="#块级框的格式化" class="headerlink" title="块级框的格式化"></a>块级框的格式化</h2><p>块级框是块级元素或<code>display</code>属性为<code>block</code>的元素形成的元素框，通常不与其他内容共处一行，在包含块中的格式化分为横向格式化和纵向格式化两部分。</p>
+<h3 id="横向格式化"><a href="#横向格式化" class="headerlink" title="横向格式化"></a>横向格式化</h3><p>横向格式化涉及到的属性有：<code>margin-left</code>、<code>margin-right</code>、<code>border-left</code>、<code>boreder-right</code>、<code>padding-left</code>、<code>padding-right</code>和<code>width</code>，这七个属性的值加起来要等于元素包含块的宽度。</p>
+<p><img src="/2020-12-06/%E8%A7%86%E8%A7%89%E6%A0%BC%E5%BC%8F%E5%8C%96%E6%A8%A1%E5%9E%8B/image-20201206163829213.png" alt="image-20201206163829213"></p>
+<p>这七个属性中，<code>margin-left</code>、<code>margin-right</code>和<code>width</code>可以设置为<code>auto</code>，其他属性要么设置为具体的值，要么使用默认值0。如果把这三个属性都设置为具体的值，就会过度约束，CSS会把<code>margin-right</code>重置为<code>auto</code>。受七个属性之和为包含块宽度的限制，外边距的长度可以设置为负值。</p>
+<p>对于<strong>置换块级元素</strong>，当<code>width</code>的值设置为<code>auto</code>时，等于内容自身的宽度。</p>
+<h3 id="纵向格式化"><a href="#纵向格式化" class="headerlink" title="纵向格式化"></a>纵向格式化</h3><p>纵向格式化涉及到的属性有：<code>margin-top</code>、<code>margin-bottom</code>、<code>border-top</code>、<code>border-bottom</code>、<code>padding-top</code>、<code>padding-bottom</code>和<code>height</code>，这七个属性的值加起来要等于包含块的高度。</p>
+<p><img src="/2020-12-06/%E8%A7%86%E8%A7%89%E6%A0%BC%E5%BC%8F%E5%8C%96%E6%A8%A1%E5%9E%8B/image-20201206180316697.png" alt="image-20201206180316697"></p>
+<p>这几个属性中，只有<code>margin-top</code>、<code>margin-bottom</code>和<code>height</code>可以设置为<code>auto</code>，其他属性要么设置为具体的值，要么使用默认值0。而<code>maring-top</code>或<code>margin-bottom</code>设置为<code>auto</code>后，二者都会被计算为0。当包含块高度是具体值时，块级框的高度设置为百分比会相对包含块高度计算。纵向格式化的上下外边距也可以设置为负数，也符合七个属性之和为包含块高度的计算方式。</p>
+<h3 id="外边距重叠"><a href="#外边距重叠" class="headerlink" title="外边距重叠"></a>外边距重叠</h3><p>纵向格式化中，相邻的纵向外边距会重叠。</p>
+<ul>
+<li>两者都为正数时，重叠后的结果为两者中最大的值</li>
+<li>两者都为负数时，重叠后的结果为两者中绝对值最大的值</li>
+<li>两者一个为正一个为负时，重叠后的结果为两者相加的和</li>
+</ul>
+<h2 id="行内框的格式化"><a href="#行内框的格式化" class="headerlink" title="行内框的格式化"></a>行内框的格式化</h2><p>行内元素的格式化决定了行内元素在一行类如何显示。</p>
+<ul>
+<li>匿名文本：不在任何行内元素中的字符串。</li>
+<li>字体框：由字体定义的方框，<code>font-size</code>控制字体框的高度。</li>
+<li>内容区：对于非置换元素，内容区是各字符连在一起的方框。对于置换元素，内容区是元素自身内容加上内外边距和边框。</li>
+<li>行距：行距<code>font-size</code>和<code>line-heigt</code>之差，二者的差值除以2分别添加到内容区的上部和下部。只有非置换元素才有行距。</li>
+<li>行内框：内容区加行距得到的方框。</li>
+<li>行框：过一行中各行内框最高点和最低点的方框。</li>
+</ul>
+<p><img src="/2020-12-06/%E8%A7%86%E8%A7%89%E6%A0%BC%E5%BC%8F%E5%8C%96%E6%A8%A1%E5%9E%8B/image-20201206201850184.png" alt="image-20201206201850184"></p>
+<p>一行内各元素的行内框高度计算过程是：</p>
+<ol>
+<li>计算行内各非置换元素和匿名文本的<code>font-size</code>和<code>line-height</code>，得到各元素行内框</li>
+<li>计算行内各置换元素的高度、上下外边距、上下内边距和上下边框宽度</li>
+<li>将行内各元素基线对齐，置换元素用行内框的底边（包括外边距）对齐</li>
+<li>通过<code>vertical-align</code>确定元素偏移量</li>
+<li>计算行框高度：各行内框最高边与最低边的距离</li>
+</ol>
+<p>对齐基线后，<code>vertical-align</code>可以对元素进行偏移，常用的取值有：</p>
+<ul>
+<li><code>top</code>：行内框顶边与行框顶边对齐</li>
+<li><code>bottom</code>：行内框底边与行框底边对齐</li>
+<li><code>baseline</code>：行内框基线与行框基线对齐</li>
+<li><code>middle</code>：行内框纵向中点与父元素基线以上0.5ex处的点对齐</li>
+</ul>
+<h2 id="行内块级框的格式化"><a href="#行内块级框的格式化" class="headerlink" title="行内块级框的格式化"></a>行内块级框的格式化</h2><p>行内块级元素与其他元素和内容的关系一律按照行内框处理，它在一行内是被当作置换元素格式化的，行内块级元素的底边与基线对齐。而它的内容被视为块级元素进行格式化。</p>
 
     </div>
 
@@ -214,9 +269,6 @@
     
 
       <footer class="post-footer">
-          <div class="post-tags">
-              <a href="/tags/React/" rel="tag"># React</a>
-          </div>
 
         
 
@@ -224,13 +276,10 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2020-11-16/React%E4%B8%80%E8%87%B4%E5%8C%96%E7%AE%97%E6%B3%95/" rel="prev" title="React一致化算法">
-      <i class="fa fa-chevron-left"></i> React一致化算法
+    <a href="/2020-11-25/%E4%B8%89%E5%8D%81%E4%B8%83%E2%80%94%E2%80%94%E5%8C%97%E5%91%A8%E6%AD%A6%E5%B8%9D/" rel="prev" title="三十七——北周武帝">
+      <i class="fa fa-chevron-left"></i> 三十七——北周武帝
     </a></div>
-      <div class="post-nav-item">
-    <a href="/2020-11-21/promise%E7%90%86%E8%A7%A3%E5%92%8C%E8%A7%84%E8%8C%83%E5%AE%9E%E7%8E%B0/" rel="next" title="Promise理解和规范实现">
-      Promise理解和规范实现 <i class="fa fa-chevron-right"></i>
-    </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -289,6 +338,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%85%83%E7%B4%A0%E6%A1%86"><span class="nav-number">1.</span> <span class="nav-text">元素框</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%8C%85%E5%90%AB%E5%9D%97"><span class="nav-number">2.</span> <span class="nav-text">包含块</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9D%97%E7%BA%A7%E6%A1%86%E7%9A%84%E6%A0%BC%E5%BC%8F%E5%8C%96"><span class="nav-number">3.</span> <span class="nav-text">块级框的格式化</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%A8%AA%E5%90%91%E6%A0%BC%E5%BC%8F%E5%8C%96"><span class="nav-number">3.1.</span> <span class="nav-text">横向格式化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BA%B5%E5%90%91%E6%A0%BC%E5%BC%8F%E5%8C%96"><span class="nav-number">3.2.</span> <span class="nav-text">纵向格式化</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%96%E8%BE%B9%E8%B7%9D%E9%87%8D%E5%8F%A0"><span class="nav-number">3.3.</span> <span class="nav-text">外边距重叠</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A1%8C%E5%86%85%E6%A1%86%E7%9A%84%E6%A0%BC%E5%BC%8F%E5%8C%96"><span class="nav-number">4.</span> <span class="nav-text">行内框的格式化</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%A1%8C%E5%86%85%E5%9D%97%E7%BA%A7%E6%A1%86%E7%9A%84%E6%A0%BC%E5%BC%8F%E5%8C%96"><span class="nav-number">5.</span> <span class="nav-text">行内块级框的格式化</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
